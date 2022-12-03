@@ -27,7 +27,7 @@ export default class Dijkstra {
 	visitedGridSquares = []
 	path = []
 
-	setup = () => {
+	setup() {
 		this.rows = Math.floor(height / this.gridSize)
 		this.cols = Math.floor(width / this.gridSize)
 		this.grid = new Array(this.rows).fill(null).map((row) => new Array(this.cols))
@@ -60,7 +60,7 @@ export default class Dijkstra {
 		return neighbors
 	}
 
-	draw = () => {
+	draw() {
 		if (0 < this.seenGridSquares.length) {
 			let curGridSquare = this.seenGridSquares[0]
 			for (let gridSquare of this.seenGridSquares) {
